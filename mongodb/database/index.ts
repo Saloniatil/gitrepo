@@ -10,8 +10,8 @@ export const connectToDatabase = async () => {
   if (!MONGODB_URI) throw new Error('MONGODB_URI is missing');
 
   cached.promise = cached.promise || mongoose.connect(MONGODB_URI, {
-    dbName: 'evently',
-    bufferCommands: false, 
+    dbName: 'Evently',
+    bufferCommands: false,
   })
 
   cached.conn = await cached.promise;
@@ -19,5 +19,5 @@ export const connectToDatabase = async () => {
   return cached.conn;
 }
 
-//Server actions
-//connectToDatabase() ....
+// Server actions
+// connectToDatabase() ...
